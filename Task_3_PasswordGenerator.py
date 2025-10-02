@@ -13,11 +13,9 @@ def generatePassword(len):
                 random.choice(special)]
         
     unshuffledPassword = digits + lower + upper + special
-
     extra = len - 4
     password += random.choices(unshuffledPassword, k = extra)
     random.shuffle(password)
-
     return "".join(password)
 
 def main():
@@ -25,14 +23,12 @@ def main():
     print("             P A S S W O R D   G E N E R A T O R")
     print("----------------------------------------------------------------\n")
     try:
-       
         length = int(input("Enter the length of the password : "))
         if length < 6:
             print("Password length must be atleast 6 characters.")
             return
 
         password = generatePassword(length)
-
         if password:
             print("\nGenerated Password : ", password)
 
@@ -42,3 +38,4 @@ def main():
         print("Invalid input! Please enter a valid number.")
 
 main()
+
