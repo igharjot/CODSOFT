@@ -55,7 +55,6 @@ def main():
                     print(num1, "/", num2, "=", result)
 
             print("\n")
-
         else:
             print("Invalid input! Enter your choise again.")
 
